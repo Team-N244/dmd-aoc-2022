@@ -1,14 +1,13 @@
 ﻿#region { FILE INPUT }
 
-string day = "DayOne";
+string day = "One";
 
-string inputPath = $@"C:\Users\ddupuis\source\repos\dmd-aoc-2022\AdventOfCode\Input\{day}.txt";
+string inputPath = $@"C:\Users\ddupuis\source\repos\dmd-aoc-2022\AdventOfCode\Day{day}\Input.txt";
 Console.WriteLine(inputPath);
 string[] fileLines = File.ReadAllLines(inputPath);
 
 #endregion { FILE INPUT }
 
-#region { DAY ONE }
 /**
  * https://adventofcode.com/2022/day/1
  * 
@@ -34,12 +33,9 @@ foreach (string line in fileLines)
     curCal += int.Parse(line);
 }
 
-// sort list
 var sortedList = elfCalories.OrderByDescending(x => x);
 
 var topElf = sortedList.First(); // 67450
 var topThree = sortedList.Take(3).Sum(); // 199357
 
 Console.WriteLine(topThree);
-
-#endregion { DAY ONE }
