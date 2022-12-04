@@ -1,8 +1,8 @@
-﻿using AdventOfCode.DayTwo;
+﻿using AdventOfCode.DayThree;
 
 #region { FILE INPUT }
 
-string day = "Two";
+string day = "Three";
 
 string inputPath = $@"C:\Users\ddupuis\source\repos\dmd-aoc-2022\AdventOfCode\Day{day}\Input.txt";
 Console.WriteLine(inputPath);
@@ -21,9 +21,19 @@ string[] fileLines = File.ReadAllLines(inputPath);
 
 #region { DAY TWO }
 
-DayTwo solver2 = new DayTwo(fileLines);
+//DayTwo solver2 = new(fileLines);
 
-Console.WriteLine("Part One: " + solver2.Solve(1)); // solution for part 1
-Console.WriteLine("Part Two: " + solver2.Solve(2)); // solution for part 2
+//Console.WriteLine("Part One: " + solver2.Solve(1)); // solution for part 1
+//Console.WriteLine("Part Two: " + solver2.Solve(2)); // solution for part 2
 
 #endregion { DAY TWO }
+
+#region { DAY THREE }
+
+DayThree solver3 = new(fileLines);
+
+Console.WriteLine("Part One: " + solver3.Solve(1)); // solution for part 1
+Console.WriteLine("Part Two: " + solver3.Solve(2)); // solution for part 2
+
+#endregion { DAY THREE }
+
