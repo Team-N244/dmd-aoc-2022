@@ -39,16 +39,13 @@
 
         private static bool IsSubstringUnique(string str)
         {
-            string one, two;
-            for (int i = 0; i < str.Length; i++)
+            HashSet<int> map = new();
+            foreach (char c in str)
             {
-                one = str.Substring(i, 1);
-                for (int j = 0; j < str.Length; j++)
-                {
-                    two = str.Substring(j, 1);
-                    if ((one == two) && (i != j))
-                        return false;
-                }
+                if (map.Contains(c))
+                    return false;
+
+                map.Add(c);
             }
             return true;
         }
